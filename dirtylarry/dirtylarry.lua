@@ -337,9 +337,9 @@ function dirtylarry.slider(self, node_str, action_id, action, min_value, max_val
 
     local hit = hit_test(self, node_sa, action_id, action) or hit_test(self, node_value, action_id, action)
 
-    if action.released and action_id == dirtylarry.action_id_touch and dirtylarry.active_node == node_sa then
+    if action.released and action_id == dirtylarry.action_id_touch then
         dirtylarry.active_node = nil
-    elseif hit and action.pressed and dirtylarry.active_node == nil then
+    elseif hit and action.pressed then
         dirtylarry.active_node = node_sa
     end
 
